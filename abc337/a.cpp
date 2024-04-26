@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+#if __has_include(<atcoder/all>)
+  #include <atcoder/all>
+using namespace atcoder;
+#endif
+using namespace std;
+using ll = long long;
+using mint = modint998244353;
+#define rep(i, n) for (ll i = 0; i < (n); ++i)
+#define rep1(i, s, n) for (ll i = s; i < n; i++)
+int main() {
+    string s;
+    cin >> s;
+    ll a;
+    rep(i,s.size()){
+        if(s.at(i)=='.'){
+            a=i;
+        }
+    }
+    rep1(i,a+1,s.size()){
+        cout << s.at(i);
+    }
+    cout << endl;
+}
