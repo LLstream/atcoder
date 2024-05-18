@@ -40,18 +40,20 @@ int main() {
         }
     }
     ans+=t*((d-b)/2);
-    aa=a%4,cc=c%4,t=0;
-    while(true){
-        if(aa==cc){
-            break;
+    if((d-b)%2!=0){
+        aa=a%4,cc=c%4,t=0;
+        while(true){
+            if(aa==cc){
+                break;
+            }
+            t+=w.at(b%2).at(aa);
+            aa++;
+            if(aa==4){
+                aa=0;
+            }
         }
-        t+=w.at(b%2).at(aa);
-        aa++;
-        if(aa==4){
-            aa=0;
-        }
+        ans+=t;
     }
-    ans+=t;
     cout << ans << endl;
     //サンプルは通ったんだけどなぁ
 }
