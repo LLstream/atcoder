@@ -9,20 +9,13 @@ using ll = long long;
 #define rep(i, n) for (ll i = 0; i < (n); ++i)
 #define rep1(i, s, n) for (ll i = s; i < n; i++)
 int main() {
-    double n;
-    ll a,b=n;
+    int n;
     cin >> n;
-    a=n/1.08;
-    ll min=a,max=a+1;
-    // cout << min << endl;
-    // cout << max*1.08 << endl;
-    if(min*1.08==n){
-        cout << min << endl;
+    rep1(i,1,50001){
+        if(i*108/100==n){
+            cout << i << endl;
+            return 0;
+        }
     }
-    else if(max*1.08==n){
-        cout << max << endl;
-    }
-    else{
-        cout << ":(" << endl;
-    }
+    cout << ":(" << endl;
 }
