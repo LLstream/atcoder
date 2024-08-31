@@ -17,7 +17,8 @@ int main() {
         mx=max(mx,ll(s.at(i).size()));
     }
     rep(i,n){
-        rep(j,mx-s.at(i).size()+1){
+        ll a=s.at(i).size();
+        rep(j,mx-a+1){
             s.at(i).push_back('*');
         }
     }
